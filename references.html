@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>References</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url("img/3.avif");
+            background-repeat: no-repeat;
+        }
+
+        #overlay {
+            position: fixed; /* Sit on top of the page content */
+            display: none; /* Hidden by default */
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer; /* Add a pointer on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a class="active" href="index.html">Mount Kilimanjaro</a>
+        <a href="section1.html">Geology and Geography</a>
+        <a href="section2.html">Volcanology</a>
+        <a href="section3.html">Glaciers</a>
+        <a href="see_also.html">See Also</a>
+        <a href="references.html">References</a>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+    <div id="overlay" onclick="off()"></div>
+
+    <div style="padding:20px">
+        <button onclick="on()"><a href="https://en.wikipedia.org/wiki/Mount_Kilimanjaro">1.Mount Kilimanjaro Wiki</button>
+    </div>
+
+    <div style="padding:20px">
+        <button onclick="on()"><a href="https://xpatsinternational.com/climbing-mount-kilimanjaro-for-beginners/">2.Sharaf, Yasir</button>
+    </div>
+
+    <div style="padding:20px">
+        <button onclick="on()"><a href="https://web.archive.org/web/20150717212549/http://maps.ewpnet.com/kilimap.asp">3.EWP Map Guides</button>
+    </div>
+
+    <div style="padding:20px">
+        <button onclick="on()"><a href="https://earthobservatory.nasa.gov/images/89605/the-zones-of-kilimanjaro">4.NASA Earth Observatory</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/references.js"></script>
+
+</body>
+
+</html>

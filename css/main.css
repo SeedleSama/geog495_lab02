@@ -1,0 +1,120 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(197, 211, 199);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(219, 189, 189);
+  color: rgb(219, 75, 75);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #aeeaec;
+  color: rgb(44, 171, 209);
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* When the screen is less than 800 pixels wide, */
+@media screen and (max-width: 1000px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+  /* Show the icon that should open and close the topnav*/
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon, */
+/* the "responsive" class attribute will be added to the topnav by the JavaScript code. */
+/* This media query sets the style for the unfolded topnav. */
+/* It makes the topnav look good on small screens (display the links vertically instead of horizontally)  */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("../img/1.avif"); }
+.img2 { background-image: url("../img/2.avif"); }
+.img3 { background-image: url("../img/3.avif"); }
+.img4 { background-image: url("../img/4.avif"); }
+.img5 { background-image: url("../img/5.avif"); }
+.img6 { background-image: url("../img/6.avif"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border: 10px solid #f1f1f1;
+  position: fixed; /* Stay fixed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
